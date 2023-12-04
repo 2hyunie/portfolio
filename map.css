@@ -1,0 +1,223 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#map {
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+  }
+
+#header {
+  margin: auto;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  z-index: 5;
+  padding: 2vh 0vh 5vh 0vh;
+  background-color: rgb(252, 242, 246);
+}
+
+#features {
+  padding-top: 80vh;
+  padding-bottom: 10vh;
+}
+@media (max-width: 750px) {
+  #features {
+    width: 90vw;
+    margin: 0 auto;
+  }
+}
+
+#footer {
+  padding:60px 0;
+  width: 100%;
+  background-color: rgb(252, 242, 246);
+  color:#4b4c4d;
+  min-height: 2vh;
+  text-align: left;
+  line-height: 25px;
+  width: 100%;
+  position: relative;
+  z-index: 5;
+}
+
+.footer ul {
+  padding:0;
+  list-style:none;
+  text-align:center;
+  font-size:18px;
+  line-height:1.6;
+  margin-bottom:0;
+}
+
+.footer li {
+  padding:0 10px;
+  font-family: roboto;
+  font-size: 1rem;
+}
+
+.footer ul a {
+  color:inherit;
+  text-decoration:none;
+  opacity:0.8;
+}
+
+.footer ul a:hover {
+  opacity:1;
+}
+
+.footer .social {
+  text-align:center;
+  padding-bottom:25px;
+}
+
+.footer .social > a {
+  font-size:24px;
+  width:40px;
+  height:40px;
+  line-height:40px;
+  display:inline-block;
+  text-align:center;
+  border-radius:50%;
+  border:1px solid tomato;
+  margin:0 8px;
+  color:inherit;
+  opacity:0.75;
+}
+
+.footer .social > a:hover {
+  opacity:0.6;
+  color: tomato;
+}
+
+.footer .copyright {
+  margin-top:1px;
+  font-family: roboto;
+  text-align:center;
+  font-size:13px;
+  color:#aaa;
+  margin-bottom:1;
+}
+
+/* Credit to https://epicbootstrap.com/snippets/footer-basic */
+
+#header h1 {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: didot;
+    margin: auto;
+    max-width: 700px;
+}
+#header h4 {
+    font-family: didot;
+    font-weight: 300;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 600px;
+}
+
+#header p.byline {
+    font-weight: 300;
+    font-size: 0.9em;
+    margin: 0.5em auto 0.8em auto;
+}
+#header p {
+    font-family: didot;
+    text-align: left;
+    max-width: 700px;
+    margin: 1em auto 1em auto;
+    font-size: 1.0em;
+    font-family: roboto;
+    line-height: 2;
+}
+
+h3 {
+  font-size: 1.5em;
+  font-family: didot;
+  color: rgb(255, 141, 141);
+}
+
+a:visited {
+  text-decoration: none;
+  color: rgb(255, 141, 141);
+}
+
+a:hover {
+  text-decoration: none;
+  color: tomato;
+}
+
+#features p {
+    font-family: roboto;
+    text-align: left;
+    font-size: 1.0em;
+    max-width: 50vw;
+}
+
+#footer p {
+  font-family: didot;
+  font-size: 1em;
+  max-width: 600px;
+  padding: 0.75em 0em;
+  margin: 0px auto;
+  line-height: 1;
+}
+
+.hidden {
+    visibility: hidden;
+  }
+  .centered {
+    width: 50vw;
+    margin: 0 auto;
+  }
+  .lefty {
+    width: 33vw;
+    margin-left: 5vw;
+  }
+  .righty {
+    width: 33vw;
+    margin-left: 62vw;
+  }
+  .fully {
+    width: 100%;
+    margin: auto;
+  }
+  .light {
+    color: #444;
+    background-color: #ffffff;
+  }
+  .dark {
+    color: #fafafa;
+    background-color: #444;
+  }
+
+  .step {
+    padding-bottom: 50vh;
+    opacity: 0.15;
+  }
+  .step.active {
+    opacity: 0.99;
+  }
+  .step div {
+    padding: 25px 50px;
+    line-height: 25px;
+    font-size: 13px;
+  }
+  .step img {
+    width: 100%;
+  }
+  @media (max-width: 750px) {
+    .centered, .lefty, .righty, .fully {
+      width: 90vw;
+      margin: 0 auto;
+    }
+  }
+  /* Fix issue on mobile browser where scroll breaks  */
+  .mapboxgl-canvas-container.mapboxgl-touch-zoom-rotate.mapboxgl-touch-drag-pan, 
+  .mapboxgl-canvas-container.mapboxgl-touch-zoom-rotate.mapboxgl-touch-drag-pan .mapboxgl-canvas {
+    touch-action: unset;
+  }
